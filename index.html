@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+//Rules
+$(document).ready(function(){
+    $("#agreeButton").click(function(){
+        $("#preStart").hide();
+    });
+        $("#agreeButton").click(function(){
+        $("#loser4evaIsaMightyLongTime").show();
+        $("#agreeButton").hide();
+        $("#startButton").show();
+    });
+
+//Start Click    
+    $("#startButton").click(function() {
+        $("#startButton").hide();
+        $("#Qtemplate").show();
+        $("#loser4evaIsaMightyLongTime").hide();
+
+    })
+});
+
+// Question Check Radio Button 
+$(document).ready(function() {
+  $("#c:radio").click(function() {
+     $("#loser").hide()
+     $("#gif").show();
+    });
+});
+ 
+ //I know it needs to be DRY
+$(document).ready(function() {
+  $("#a:radio").click(function() {
+     $("#gif").hide();
+     $("#loser").show();
+  });
+});
+ 
+ $(document).ready(function() {
+  $("#b:radio").click(function() {
+     $("#gif").hide();
+     $("#loser").show();
+  });
+});
+ 
+ 
+ $(document).ready(function() {
+  $("#d:radio").click(function() {
+     $("#gif").hide();
+     $("#loser").show();
+    });
+ });
+
+
+
+</script>
+</head>
+<body>
+
+<!--Rules and Start-->
+<div id="preStart">
+    <h1>Rules</h1>
+    <p> It's Trivia Im sure you can figure it out. By clicking 'I agree' below, I (the button presser) give Amanuel an A. <br>Because, <strong>obvisously</strong> he didn't earn one.</p>
+</div>
+
+<button id="agreeButton">I agree</button>
+<button id="startButton" style="display:none;">Start</button>
+
+<!--The Realest Loser -->
+<div id="loser4evaIsaMightyLongTime" style="display:none;">
+    <img src="./i-dont-always-refer-to-myself-in-the-third-person-but-when-i-do-it-is-really-lame.jpg" alt="Keegan-Michael Key saying loser" title="loser">
+</div>
+
+
+<!--Questions Template -->
+<div id="Qtemplate" style="display:none;">
+<h1 id="Question">cat___</h1>
+    <input type="radio" name="selection" id="a" />
+    <label for="a">bat</label>
+    <br>
+    <input type="radio" name="selection" id="b"/>
+    <label for="b">hat</label>
+    <br>
+    <input type="radio" name="selection" id="c"/>
+    <label for="c">dog</label>
+    <br>
+    <input type="radio" name="selection" id="d"/>
+    <label for="d">man</label>
+    <br>
+
+
+</div>
+
+<!--Winner Winner-->
+<div id="gif" style="display:none;"> 
+    <video width="320" height="240" controls>
+      <source src="./source.mp4" type="video/mp4">
+</video></div>
+
+<!--Loser-->
+<div id="loser" style="display:none;">
+    <img src="./source.gif" alt="Keegan-Michael Key saying loser" title="loser">
+</div>
+
+</body>
+</html>
